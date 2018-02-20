@@ -1,0 +1,24 @@
+{
+ "manifest_version" : 2,
+ "name": "chrome_p",
+ "description": "To stored browsed url",
+ "version": "1.10",
+ "browser_action": {
+   "default_icon": "img/icon.png",
+   "default_title": "Chrome E!"
+ },
+ "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/"
+  ],
+  "background" : {
+     "scripts": ["background.js"]
+  },
+  "content_scripts": [
+ {
+   "matches": ["*://*/*"],
+ "js": ["myscript.js"]
+ }
+ ]
+}
